@@ -59,16 +59,9 @@ function addTwoNumbers() {
 
 function getTable() {
   let num = +prompt("Enter a number:");
-  console.log(`${num}*1 = ${num*1}`);
-  console.log(`${num}*2 = ${num*2}`);
-  console.log(`${num}*3 = ${num*3}`);
-  console.log(`${num}*4 = ${num*4}`);
-  console.log(`${num}*5 = ${num*5}`);
-  console.log(`${num}*6 = ${num*6}`);
-  console.log(`${num}*7 = ${num*7}`);
-  console.log(`${num}*8 = ${num*8}`);
-  console.log(`${num}*9 = ${num*9}`);
-  console.log(`${num}*10 = ${num*10}`);
+  for(let i=1; i<=10; i++) {
+    console.log(`${num} * ${i} = ${num*i}`);
+  }
 }
 
 /*
@@ -106,8 +99,9 @@ function isLeapYear() {
 function getFactorial() {
   let number = +prompt("Enter a number: ");
   let fact = 1;
-  for (let i=1; i<=number; i++) {
+  for (let i=number; i>=1; i--) {
     fact *= i;
   }
   alert(`The factorial of ${number} is ${fact}`)
 }
+getFactorial()
