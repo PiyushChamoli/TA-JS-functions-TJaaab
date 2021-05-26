@@ -2,6 +2,10 @@
 1. Create a function named `sayHello` that that accepts a parameter `name` and alert `Hello [name]!`.
 */
 
+function sayHello(name) {
+  alert(`Hello ${name}!`);
+}
+
 /*
 2. Create a function named `getFullName` that accepts two parameter `firstName` and `lastName` and returns
 fullName.
@@ -10,6 +14,10 @@ Example:
   getFullName("John", "Snow"); // "John Snow"
   getFullName("Nelson", "Mandela"); // "Nelson Mandela"
 */
+
+function fullName(firstName, lastName) {
+  return(`${firstName} ${lastName}`);
+}
 
 /*
 3. Create a function named `addTwoNumbers` that accepts two numbers i.e `firstNum` and `secondNum` and returns
@@ -20,6 +28,14 @@ addTwoNumbers(10, 22); // 32
 addTwoNumbers(20, 32); // 32
 addTwoNumbers(10, "100"); // Alert Enter Valid Input
 */
+
+function addTwoNumbers(firstNum, secondNum) {
+  if (typeof(firstNum) == "string" || typeof(secondNum) == "string") {
+    alert("Enter Valid Input");
+  } else {
+    alert(`Sum is ${firstNum+secondNum}`);
+  }
+}
 
 /*
 4. Create a function named `calc` which accepts three parameter `numA`, `numB` and `operation`. Operation
@@ -34,6 +50,26 @@ calc(20, 10, 'mul'); // 200
 */
 
 
+function calc(numA, numB, operation) {
+  if (typeof(numA) == "number" && typeof(numB) == "number") {
+    if (operation == "add" || operation == "sub" || operation == "mul" || operation == "div") {
+      if (operation == "add") {
+        alert(numA+numB);
+      } else if (operation == "sub") {
+        alert(numA-numB);
+      } else if (operation == "mul") {
+        alert(numA*numB);
+      } else if (operation == "div") {
+        alert(numA/numB);
+      }
+    } else {
+      alert("Enter Valid Input");
+    }
+  } else {
+    alert("Enter Valid Input");
+  }
+}
+
 /*
 5. Create a function named `isLeapYear` that accepts a number data type and return `true` or `false` based
 on if the year id leap year or not.
@@ -46,3 +82,11 @@ isLeapYear(2001); // false
 /*
 6. Create a function named `getFactorial` that accepts a number and return the factorial of the number.
 */
+
+function getFactorial(number) {
+  let total=1;
+  for(let i=number; i>=1; i--) {
+    total *= i;
+  }
+  return(`Factorial of ${number} is ${total}`); 
+}
