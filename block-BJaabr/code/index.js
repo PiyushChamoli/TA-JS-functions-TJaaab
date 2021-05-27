@@ -42,13 +42,29 @@ Do the following with above problem.
 
 // - Write a Function Declaration
 
+function addOne(n) {
+  return n+1;
+}
+
 // - Write a Function Expression
+
+let returnOne = function(n) {
+  return n+1;
+}
 
 // - Write an Arrow Function without curly brackets(if possible)
 
+let returnOne = (n) => n+1;
+
 // - Write an Arrow Function with curly brackets
 
+let returnOne = (n) {
+  return n+1;
+}
+
 // - Execute the function
+
+returnOne(5);
 
 // - Execute the function and store the return value in a variable.
 
