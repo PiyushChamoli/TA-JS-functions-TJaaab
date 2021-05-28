@@ -27,11 +27,7 @@ isInRange(1, 10, 19); // false
 
 // - Write a Function Decleration for above problem
 function isInRange(lower, upper, number) {
-  if (number>lower && number<upper) {
-    return true;
-  } else {
-    return false;
-  }
+  return number > lower && number < upper;
 }
 // - Execute the function with required parameter
 
